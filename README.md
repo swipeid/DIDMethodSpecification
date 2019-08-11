@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document defines a Swipe DID Method that conforms to the DID Spec. The method is implemented on top of Textile and ipfs, and is intended to be cheap, fast, scalable, and secure. It is suitable for both public and most private relationships between people, organizations, and things. As far as possible we try to adhere to the Peer specification [Peer DID Method Specification](https://openssi.github.io/peer-did-method-spec/index.html) as well, when applicable, the [IPID specification](https://did-ipid.github.io/ipid-did-method/)
+This document defines a Swipe DID Method that conforms to the [DID Spec](https://w3c-ccg.github.io/did-spec/#privacy-considerations). The method is implemented on top of Textile and ipfs, and is intended to be cheap, fast, scalable, and secure. It is suitable for both public and most private relationships between people, organizations, and things. As far as possible we try to adhere to the Peer specification [Peer DID Method Specification](https://openssi.github.io/peer-did-method-spec/index.html) as well, when applicable, the [IPID specification](https://did-ipid.github.io/ipid-did-method/)
 
 ## Status of This Document
 
@@ -20,8 +20,7 @@ We intend for this method to provide all the different types of DID
 * **Pairwise** Used only for a one-to-one peer relationship
 * **N-wise** Used for N-peers
 
-In essence there is no difference to how we create and manage the different types. It is only a matter of officially publishing the Anywise DIDs using mechanisms such as publishing on a homepage or registering in some kind of public registry, such as a blockchain.
-
+In essence there is no difference to how we create and manage the different types. It is only a matter of officially publishing the Anywise DIDs using mechanisms such as publishing on a homepage or registering in some kind of public ledger, such as a blockchain.
 
 
 ## 2. Core Characteristics
