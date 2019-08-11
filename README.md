@@ -2,7 +2,7 @@
 
 ## Abstract
 
-This document defines a Swipe DID Method that conforms to the [DID Spec](https://w3c-ccg.github.io/did-spec/#privacy-considerations). The method is implemented on top of Textile and ipfs, and is intended to be cheap, fast, scalable, and secure. It is suitable for both public and most private relationships between people, organizations, and things. As far as possible we try to adhere to the Peer specification [Peer DID Method Specification](https://openssi.github.io/peer-did-method-spec/index.html) as well, when applicable, the [IPID specification](https://did-ipid.github.io/ipid-did-method/)
+This document defines a Swipe DID Method that conforms to the [DID Spec](https://w3c-ccg.github.io/did-spec). The method is implemented on top of Textile and ipfs, and is intended to be cheap, fast, scalable, and secure. It is suitable for both public and most private relationships between people, organizations, and things. As far as possible we try to adhere to the Peer specification [Peer DID Method Specification](https://openssi.github.io/peer-did-method-spec/index.html) as well, when applicable, the [IPID specification](https://did-ipid.github.io/ipid-did-method/)
 
 ## Status of This Document
 
