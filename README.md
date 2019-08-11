@@ -1,14 +1,12 @@
-# SwipeId DID Method Specification
+# Swipe DID Method Specification
 
 ## Abstract
 
-This document defines a SwiftId DID Method that conforms to the DID Spec. The method is implemented on top of Textile and ipfs, and is intended to be cheap, fast, scalable, and secure. It is suitable for both public and most private relationships between people, organizations, and things. As far as possible we adhere to the PeerId specification [Peer DID Method Specification](https://openssi.github.io/peer-did-method-spec/index.html)
+This document defines a Swipe DID Method that conforms to the DID Spec. The method is implemented on top of Textile and ipfs, and is intended to be cheap, fast, scalable, and secure. It is suitable for both public and most private relationships between people, organizations, and things. As far as possible we try to adhere to the Peer specification [Peer DID Method Specification](https://openssi.github.io/peer-did-method-spec/index.html) as well, when applicable, the [IPID specification](https://did-ipid.github.io/ipid-did-method/)
 
 ## Status of This Document
 
 A very first draft
-
-Would it be possible to use multiformats and make this actually *be* a peer id?
 
 ## 1. Introduction
 
@@ -21,6 +19,10 @@ We intend for this method to provide all the different types of DID
 * **Anywise** Publically resolvable and published
 * **Pairwise** Used only for a one-to-one peer relationship
 * **N-wise** Used for N-peers
+
+In essence there is no difference to how we create and manage the different types. It is only a matter of officially publishing the Anywise DIDs using mechanisms such as publishing on a homepage or registering in some kind of public registry, such as a blockchain.
+
+
 
 ## 2. Core Characteristics
 
@@ -39,15 +41,13 @@ This DID method applies to any identity management implementation that meets the
 
 ### 2.3 Method Specific Identifier
 
-The SwipeId DID scheme is defined by the following ABNF (see [RFC5234] for syntax):
+The Swipe DID scheme is defined by the following ABNF (see [RFC5234] for syntax):
 
 **FIXME** 
 
-EXAMPLE 1: ABNF for peer DIDs
-peer-did = "did:swipe:" numalgo encalgo "-" numbasis
-numalgo = "1"
-encalgo = "1"
-numbasis = 64*HEXDIGCI
+EXAMPLE 1: ABNF for Swipe DIDs
+swipe-did = "did:swipe:id
+id = 64*HEXDIGCI
 HEXDIGCI = HEXDIG / "a" / "b" / "c" / "d" / "e" / "f"
 
 ### 2.4 Namestring Generation Method
@@ -90,4 +90,63 @@ This section seems to be a new one and deals with [SGL (Simple Grant Language)](
 ## 4. Protocols
 
 ### 4.1 Roles and Agents
+### 4.2 Messages
+
+## 4.3 CRUD Operations
+
+### 4.3.1 Create (Register)
+
+### 4.3.2 Read (Resolve)
+
+### 4.3.3 Update
+
+### 4.3.4 Deactivate
+
+## A. Security Considerations
+
+*This section is non-normative.*
+
+> At least the following forms of attack MUST be considered:
+eavesdropping, replay, message insertion, deletion, modification,
+impersonation, and man-in-the-middle.
+
+> Potential denial of service attacks MUST be identified as well.
+
+> If the protocol incorporates cryptographic protection mechanisms, it
+should be clearly indicated which portions of the data are protected and what the protections are (i.e., integrity only, confidentiality, and/or endpoint authentication, etc.).
+
+> Some indication should also be given to what sorts of attacks the
+cryptographic protection is susceptible.
+
+> Data which should be held secret (keying material, random seeds, etc.) should be clearly labeled.
+
+> If the technology involves authentication, particularly user-host
+authentication, the security of the authentication method MUST be
+clearly specified.
+
+> Residual risks (such as the risks from compromise in a related protocol, incorrect implementation, or cipher) after threat mitigation has been deployed.
+
+> This section MUST provide integrity protection and update authentication for all operations required by Section 7 of this specification (DID
+Operations).
+
+### A1. Verifiable Credentials
+
+If true, offline identity is required.
+
+After a new connection has been made the first step is to request a Verifiable Passport Claim. This proves that the other party has a certain National Identity Number and was at one point in possession of the passport and managed to pass the face verification.
+
+In pseudonymous relationships trust is built using other mechanisms and might not even be needed. You only need to know that you are intereacting with the same unique peer.
+
+## B. Privacy Considerations
+
+*This section is non-normative.*
+
+## C. Examples
+
+## D. Resources
+
+## E. References
+
+### E.1 Normative references
+### E.2 Informative references
 
